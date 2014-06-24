@@ -1,0 +1,25 @@
+ConcatArrays
+============
+Concats 2 arrays and displays the result.
+
+import java.util.Arrays;
+
+public class concatArr {//объединить 2 массива в 1 и вывести результат.
+	
+public static void main(String[] args){
+	
+	int[] a1 = new int[5];
+	int[] a2 = new int[9];
+	int[] a3 = new int[a1.length+a2.length];
+	
+	Arrays.fill(a1, 34);
+	Arrays.fill(a2, 86);
+	
+	System.arraycopy(a1, 0, a3, 0, a1.length);
+	System.arraycopy(a2, 0, a3, a1.length, a2.length); 
+	
+	String s1 = Arrays.toString(a3);
+	System.out.println(s1);
+
+}
+}
